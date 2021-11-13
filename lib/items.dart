@@ -1,7 +1,4 @@
-
-
-
-import 'package:ezwashflutter/widgets/itemWidget.dart';
+import 'package:ezwashflutter/widgets/item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
