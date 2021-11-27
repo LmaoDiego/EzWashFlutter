@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 
 import 'models/catalog.dart';
 
-class Items extends StatelessWidget {
+class MostVisited extends StatelessWidget {
 
   // This widget is the root of your application.
   @override

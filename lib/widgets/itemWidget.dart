@@ -96,7 +96,7 @@ class ItemDetail extends StatelessWidget {
               child: Row(
                 children: [
                   const MyStatefulWidget(),
-                  const Text("Service 1"),
+                  const Text("Pulidos de faro"),
                 ],
               ),
             ),
@@ -104,7 +104,7 @@ class ItemDetail extends StatelessWidget {
               child: Row(
                 children: [
                   const MyStatefulWidget(),
-                  const Text("Service 2"),
+                  const Text("Lavado de motor"),
                 ],
               ),
             ),

@@ -14,54 +14,54 @@ class _UserProfileState extends State<UserProfile> {
       appBar: AppBar(
         title: Text('Tu Perfil'),
       ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.all(0),
-          children: [
-            UserAccountsDrawerHeader(
-                accountName: Text('Fernando Olano'),
-            accountEmail: Text('UPC@edu.pe'),
-              currentAccountPicture: Image.asset('assets/user.png'),
-            ),
-            ListTile(
-              title: Text('Mi Perfil'),
-              leading: Icon( Icons.person),
-              onTap: (){
-                Navigator.of(context).push(MaterialPageRoute<Null>(
-                    builder: (BuildContext context){
-                      return new UserProfile();
-                    }
-                ));
-              }
-              ,
-            ),
-            ListTile(
-              title: Text('Mis Autos'),
-              leading: Icon( Icons.car_rental_sharp),
-              onTap: (){
-                Navigator.of(context).push(MaterialPageRoute<Null>(
-                    builder: (BuildContext context){
-                      return new MyCars();
-                    }
-                ));
-              }
-              ,
-            ),
-            ListTile(
-              title: Text('Mi Billetera'),
-              leading: Icon( Icons.account_balance_wallet),
-              onTap: (){
-                Navigator.of(context).push(MaterialPageRoute<Null>(
-                    builder: (BuildContext context){
-                      return new UserWallet();
-                    }
-                ));
-              }
-              ,
-            ),
-          ],
-        ),
-      ),
+      // drawer: Drawer(
+      //   child: ListView(
+      //     padding: EdgeInsets.all(0),
+      //     children: [
+      //       UserAccountsDrawerHeader(
+      //         accountName: Text('Fernando Olano'),
+      //         accountEmail: Text('UPC@edu.pe'),
+      //         currentAccountPicture: Image.asset('assets/user.png'),
+      //       ),
+      //       ListTile(
+      //         title: Text('Mi Perfil'),
+      //         leading: Icon( Icons.person),
+      //         onTap: (){
+      //           Navigator.of(context).push(MaterialPageRoute<Null>(
+      //               builder: (BuildContext context){
+      //                 return new UserProfile();
+      //               }
+      //           ));
+      //         }
+      //         ,
+      //       ),
+      //       ListTile(
+      //         title: Text('Mis Autos'),
+      //         leading: Icon( Icons.car_rental_sharp),
+      //         onTap: (){
+      //           Navigator.of(context).push(MaterialPageRoute<Null>(
+      //               builder: (BuildContext context){
+      //                 return new MyCars();
+      //               }
+      //           ));
+      //         }
+      //         ,
+      //       ),
+      //       ListTile(
+      //         title: Text('Mi Billetera'),
+      //         leading: Icon( Icons.account_balance_wallet),
+      //         onTap: (){
+      //           Navigator.of(context).push(MaterialPageRoute<Null>(
+      //               builder: (BuildContext context){
+      //                 return new UserWallet();
+      //               }
+      //           ));
+      //         }
+      //         ,
+      //       ),
+      //     ],
+      //   ),
+      // ),
       body: ListView(
         children: [
           Container(
