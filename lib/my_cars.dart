@@ -1,3 +1,4 @@
+import 'package:ezwashflutter/widgets/add_car.dart';
 import 'package:flutter/material.dart';
 class MyCars extends StatefulWidget {
   @override
@@ -14,6 +15,21 @@ class _MyCarsState extends State<MyCars> {
 
       body: ListView(
         children: [
+          Container(
+            margin: EdgeInsets.fromLTRB(150, 10, 150, 10),
+            child:
+            ElevatedButton(
+              child:
+              Text("Agregar"), onPressed: (){
+              Navigator.of(context).push(MaterialPageRoute<Null>(
+                  builder: (BuildContext context){
+                    return Imagen();
+                  }
+              )
+              );
+            },
+            ),
+          ),
           Container(
 
             padding: EdgeInsets.all(20),
@@ -77,16 +93,7 @@ class _MyCarsState extends State<MyCars> {
           Container(
             margin: EdgeInsets.fromLTRB(150, 10, 150, 10),
             child: RaisedButton(
-              child: Text(
-                'Editar',
-                style: TextStyle(
-                    fontSize: 15
-                ),
-              ),
-
-              onPressed: (){
-              },
-
+              child: Text('Editar', style: TextStyle(fontSize: 15),), onPressed: (){},
               padding: EdgeInsets.symmetric(),
               color: Colors.lightBlueAccent,
               shape: RoundedRectangleBorder(
