@@ -1,11 +1,17 @@
-import 'package:ezwashflutter/UserProfile.dart';
+// @dart=2.9
+import 'package:ezwashflutter/login.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ezwashflutter/MyCars.dart';
-import 'package:ezwashflutter/UserWallet.dart';
-import 'package:ezwashflutter/home.dart';
-import 'package:ezwashflutter/items.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import 'MyCars.dart';
+import 'UserProfile.dart';
+import 'UserWallet.dart';
+import 'directions_model.dart';
+import 'directions_repository.dart';
+import 'home.dart';
 import 'items.dart';
+import 'maps.dart';
 
 void main(){
   runApp(First());
@@ -18,11 +24,11 @@ class First extends StatelessWidget {
       title: "EzWash APP",
       theme: ThemeData(primarySwatch: Colors.blue),
       // home: Main(),
-      home: Main(),
+
+      home: LoginPage(),
     );
   }
 }
-
 class Main extends StatefulWidget {
   @override
   _MainState createState() => _MainState();
@@ -33,6 +39,7 @@ class _MainState extends State<Main> {
   final List<Widget> _paginas = [
     Home(),
     Items(),
+    MapScreen(),
   ];
 
   @override
@@ -157,7 +164,10 @@ class _MainState extends State<Main> {
           //     )
           //   ],
           // ),
+
           body: _paginas[_selectButtonNavigation],
+
+
           bottomNavigationBar: BottomNavigationBar(
             onTap: (index){
               setState(() {
@@ -168,6 +178,8 @@ class _MainState extends State<Main> {
             items: const [
               BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
               BottomNavigationBarItem(icon: Icon(Icons.house_siding), label: "Carwashes"),
+              BottomNavigationBarItem(icon: Icon(Icons.add_location), label: "Maps"),
+
             ],
           ),
         )
@@ -175,7 +187,5 @@ class _MainState extends State<Main> {
 
   }
 }
-
-
 
 
